@@ -1,0 +1,15 @@
+. ./metadata.sh
+REPO_PATH=$PATH_TO_REPO
+ACCESS_TOKEN=$GITHUB_ACCESS_TOKEN
+
+cd $REPO_PATH
+ls
+
+REPO_LINK=${1:?"Missing repo link"}
+
+N=${#REPO_LINK}
+
+LINK_WITH_TOKEN=${REPO_LINK:0:8}$ACCESS_TOKEN@${REPO_LINK:8:N}
+
+git clone $LINK_WITH_TOKEN
+ls
