@@ -19,10 +19,12 @@ git config --global user.email test@email.com
   user.email=test@email.com
   ```
 ## C++ Compiler
-- approximate space required: 202MB
+- note: gcc / g++ compilers are usually pre-installed on Ubuntu
+- clang needs to be installed manually
+- approximate space required: 707MB
 ```
-sudo apt install build-essential 
-g++ --version ## verify installation
+sudo apt install clang
+clang++ --version
 ```
 
 - Test file: ```hello.cc```
